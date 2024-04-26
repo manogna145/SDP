@@ -5,7 +5,7 @@ import './home.css'
 import moment from 'moment';
 import video from './videos/sunny.mp4'; // Import the video file
 import { IoThermometerOutline, IoSunnyOutline, IoSpeedometerOutline, IoWaterOutline } from 'react-icons/io5';
-import SevenDayForecast from './SevenDay'; // Import the SevenDayForecast component
+import SevenDay from './SevenDay'; // Import the SevenDayForecast component
 
 
 // Navbar component
@@ -192,7 +192,7 @@ const Home = ({ onLogout }) => {
           <SevenDayForecast cityName={cityName} onSearch={setCityName} />
         </div>
       </div>
-      <BottomNavbar></BottomNavbar>
+      <BottomNavbar />
     </div>
   );
 };
