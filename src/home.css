@@ -1,0 +1,259 @@
+/* src/home.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Set a light background color */
+  padding-bottom: 60px; /* Add padding to the bottom of the page for the bottom navbar */
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #718da9; /* Dark background color */
+  height: 40px;
+  padding: 10px 20px; /* Add padding for better appearance */
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar li {
+  margin-right: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #ffc107; /* Change text color on hover */
+}
+
+/* Main content styles */
+.content {
+  padding: 20px; /* Add padding for spacing */
+  position: relative;
+  z-index: 1;
+}
+
+.home-page {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflowing content */
+  padding-bottom: 60px; /* Add padding to the bottom of the page */
+}
+
+
+/* Video styles */
+.home-page video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; /* Adjust the z-index to -2 */
+  filter: brightness(0.95); /* Add some transparency to the video */
+}
+
+
+/* Weather container styles */
+.weather-container {
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align content */
+  color: #333;
+}
+
+.weather-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.weather-container input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.weather-container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.weather-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Loading spinner styles */
+.loader {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Bottom navbar styles */
+.bottom-navbar {
+  background-color:  #718da9;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  width: 100%;
+  padding: 5px 10px; /* Decrease padding to reduce size */
+  z-index: 1000;
+}
+
+.bottom-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between; /* Ensure links are spaced evenly */
+  align-items: center; /* Center links vertically */
+}
+
+.bottom-navbar li {
+  display: inline-block;
+  padding: 0;
+}
+
+.bottom-navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px; /* Decrease font size */
+}
+
+.bottom-navbar a:hover {
+  border-bottom: 2px solid #6b6a6a;
+}
+
+/* Weather card styles */
+.weather-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.weather-card h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.weather-card p {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+/* Icon styles */
+.weather-card svg {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.menu-link {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%); /* Set menu text color to white */
+}
+
+.menu-popup {
+  position: absolute;
+  top: calc(100% + 10px); /* Position the popup below the navbar */
+  left: 0;
+  background-color: #fff;
+  color: #000911;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1001; /* Set a higher z-index */
+  display: none; /* Hide the popup by default */
+}
+
+.menu-popup.active {
+  display: block; /* Show the popup when active */
+}
+
+.menu-popup a {
+  display: block;
+  color: #f7f6f6;
+  text-decoration: none;
+}
+
+.menu-popup a:hover {
+  background-color: #f0f0f0;
+}
+
+.popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1001; /* Set a higher z-index */
+}
+
+.navbar .menu-link {
+  color: #fff; /* Set menu link text color to white */
+}
+
+/* Added styles for search input and results container */
+.search-input {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

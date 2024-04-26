@@ -1,0 +1,77 @@
+/* Login.css */
+
+.full-height {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .loginheader {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .logincontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Login.css */
+
+.popupwindow {
+    max-width: 320px;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  
+  .loginstyle1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .loginstyle2 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .txtbox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .linklabel {
+    color: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .loginfooter {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    color: #666;
+  }
+  
