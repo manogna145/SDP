@@ -8,7 +8,7 @@ export function updatePwd()
 {
     var uname = getSession("sid");
     var T1 = document.getElementById("T1");
-    var url = "http://localhost:5000/login/signin";
+    var url = "https://sdp-b3o1.onrender.com/login/signin";
     var data = JSON.stringify({
         emailid: uname,
         pwd: T1.value
@@ -30,7 +30,7 @@ export function validatePwd(res)
             alert("New password and Re-Type password are not matched");
             return;
         }
-        var url = "http://localhost:5000/cp/updatepwd";
+        var url = "https://sdp-b3o1.onrender.com/cp/updatepwd";
         var input = JSON.stringify({
             emailid : getSession("sid"),
             pwd: T2.value

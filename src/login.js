@@ -20,7 +20,7 @@ function Login(){
         var T1=document.getElementById('T1');
         var T2=document.getElementById('T2');
 
-        var url = "http://localhost:5000/login/signin";
+        var url = "https://sdp-b3o1.onrender.com/login/signin";
         var data = JSON.stringify({
             emailid : T1.value,
             pwd : T2.value
@@ -114,7 +114,7 @@ function Login(){
             return;
         }
 
-        var url = "http://localhost:5000/registration/signup";
+        var url = "https://sdp-b3o1.onrender.com/registration/signup";
         var data = JSON.stringify({
             firstname : RT1.value,
             lastname : RT2.value,

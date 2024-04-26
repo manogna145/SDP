@@ -5,7 +5,7 @@ import Axios from 'axios';
 
 export function profileInfo()
 {
-    var url = "http://localhost:5000/myprofile/info";
+    var url = "https://sdp-b3o1.onrender.com/myprofile/info";
     // var data = JSON.stringify({
     //     emailid : getSession("sid")
     // });
@@ -32,7 +32,7 @@ export function loadInfo(res)
 export function uploadPhoto(){
     var FU = document.getElementById('FU');
 
-    var url = "http://localhost:5000/uploaddp";
+    var url = "https://sdp-b3o1.onrender.com/uploaddp";
     var data = new FormData();
     data.append("fname", getSession("sid"));
     data.append("myfile", FU.files[0]);

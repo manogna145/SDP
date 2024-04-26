@@ -3,11 +3,11 @@ import Axios from 'axios';
 
 function callAxios()
 {
-    // Axios.get('http://localhost:5000/klef/test')
+    // Axios.get('https://sdp-b3o1.onrender.com/klef/test')
     //     .then(res => getData(res.data))
     //     .catch(err => console.log(err));
 
-    Axios.post('http://localhost:5000/klef/cse')
+    Axios.post('https://sdp-b3o1.onrender.com/klef/cse')
         .then(res => getData(res.data))
         .catch(err => console.log(err));
 }
