@@ -23,6 +23,10 @@ app.get('/klef/test', async function(req, res){
     res.json("Koneru Lakshmaiah Education Foundation");
 });
 
+app.get('/', async function(req, res){
+    //res.send("Koneru Lakshmaiah Education Foundation");
+    res.send("Weather App Backend Started!.....");
+});
 app.post('/klef/cse', async function(req, res){
     //res.json(req.body);
     res.json("Computer Science and Engineering");

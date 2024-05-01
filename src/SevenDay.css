@@ -1,13 +1,13 @@
-.seven-day-weather-page {
+.seven-day-forecast {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #8fcee9; /* Classy grayish background color */
-  min-height: 100vh;
+  background-color: #a0d0e6; /* Classy grayish background color */
+  min-height: 100px;
 }
 
-.seven-day-weather-page h1 {
+.seven-day-forecast h1 {
   margin-top: 20px;
   font-size: 32px;
   color: #333;
@@ -16,6 +16,7 @@
 
 .search-bar {
   display: flex;
+  color: aliceblue;
   justify-content: center;
   margin-bottom: 20px;
 }
@@ -33,8 +34,9 @@
   padding: 12px 24px;
   font-size: 18px;
   border: none;
-  border-radius: 8px;
-  background-color: #007bff; /* Classy blue color */
+  border-radius: 10px;
+  height: 43px;
+  background-color: #44a4ca; /* Classy blue color */
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -45,22 +47,33 @@
 }
 
 .weather-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .weather-card {
-  background-color: #eec2c2; /* White background */
+  flex: 20px;
+  background-color: #eec2c2;
+  position:vertical;
   padding: 20px;
-  border-radius: 15px;
+  width: 300px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .weather-card:hover {
-  transform: translateY(-8px); /* Move card up on hover */
+  transform: translateY(-8px);
 }
+
+.forecast-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 
 .weather-card h3 {
   margin-bottom: 15px;
@@ -77,6 +90,9 @@
 .error-message {
   color: red;
   font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
 
