@@ -33,7 +33,7 @@ app.post('/registration/signup', async function(req, res){
     try
     {
         conn = await client.connect();
-        db = conn.db('S12');
+        db = conn.db('WeatherApp');
         users = db.collection('users');
         data = await users.insertOne(req.body);
         conn.close();
@@ -49,7 +49,7 @@ app.post('/login/signin', async function(req, res){
     try
     {
         conn = await client.connect();
-        db = conn.db('S12');
+        db = conn.db('WeatherApp');
         users = db.collection('users');
         data = await users.count(req.body);
         conn.close();
@@ -65,7 +65,7 @@ app.post('/home/uname', async function(req, res){
     try
     {
         conn = await client.connect();
-        db = conn.db('S12');
+        db = conn.db('WeatherApp');
         users = db.collection('users');
         data = await users.find(req.body, {projection:{firstname: true, lastname: true}}).toArray();
         conn.close();
@@ -80,7 +80,7 @@ app.post('/home/menu', async function(req, res){
     try
     {
         conn = await client.connect();
-        db = conn.db('S12');
+        db = conn.db('WeatherApp');
         menu = db.collection('menu');
         data = await menu.find({}).sort({mid:1}).toArray();
         conn.close();
@@ -95,7 +95,7 @@ app.post('/home/menus', async function(req, res){
     try
     {
         conn = await client.connect();
-        db = conn.db('S12');
+        db = conn.db('WeatherApp');
         menus = db.collection('menus');
         data = await menus.find(req.body).sort({smid:1}).toArray();
         conn.close();
@@ -111,7 +111,7 @@ app.post('/cp/updatepwd', async function(req, res){
     try
     {
         conn = await client.connect();
-        db = conn.db('S12');
+        db = conn.db('WeatherApp');
         users = db.collection('users');
         data = await users.updateOne({emailid : req.body.emailid}, {$set : {pwd : req.body.pwd}});
         conn.close();
@@ -127,7 +127,7 @@ app.post('/myprofile/info', async function(req, res){
     try
     {
         conn = await client.connect();
-        db = conn.db('S12');
+        db = conn.db('WeatherApp');
         users = db.collection('users');
         data = await users.find(req.body).toArray();
         conn.close();
@@ -154,7 +154,7 @@ app.post('/uploaddp', async function(req, res){
             res.json("File uploaded successfully...");
         });
         conn = await client.connect();
-        db = conn.db('S12');
+        db = conn.db('WeatherApp');
         users = db.collection('users');
         data = await users.updateOne({emailid:fname},{$set:{imgurl:fname+'.jpg'}});
         conn.close();
